@@ -15,21 +15,25 @@ body {
     padding: 2rem;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-color: rgb(57, 104, 88);
     height: 10%;
 }
 
 .header div:first-child {
+    position: relative;
     display: flex;
     gap: 1rem;
 }
 
 .header div:nth-child(2) {
+    position: relative;
     display: flex;
     gap: 1rem;
 }
 
 .header span {
+    position: relative;
     display: flex;
     font-size: 3rem;
     background-color: aquamarine;
@@ -42,14 +46,16 @@ body {
 }
 
 .options {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90%;
+    height: 79%;
 }
 
 .options button {
+    position: absolute;
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     align-items: center;
