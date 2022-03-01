@@ -1,0 +1,97 @@
+* {
+    font-family: 'Hubballi', cursive;
+}
+
+body {
+    margin: 0px;
+    height: 100vh;
+}
+
+.header {
+    position: relative;
+    border-color: gray;
+    border-style: groove;
+    border-width: 1rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(57, 104, 88);
+    height: 10%;
+}
+
+.header div:first-child {
+    display: flex;
+    gap: 1rem;
+}
+
+.header div:nth-child(2) {
+    display: flex;
+    gap: 1rem;
+}
+
+.header span {
+    display: flex;
+    font-size: 3rem;
+    background-color: aquamarine;
+    border-radius: 0.3rem;
+    border-style: inset;
+    width: 4rem;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 79%;
+}
+
+.options button {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(104, 65, 57, 0.37);
+    border-color: rgba(104, 65, 57, 1);
+    border-style: dotted;
+    border-radius: 0.5rem;
+    color: whitesmoke;
+    height: 50%;
+    width: 25%;
+    backdrop-filter: blur(2px);
+}
+
+.options button:first-child span:first-child {
+    position: relative;
+    font-size: 350%;
+    font-weight: 700;
+}
+
+.options button:first-child span:nth-child(2) {
+    position: relative;
+    font-size: 100%;
+    font-weight: 100;
+}
+
+.options div {
+    display: flex;
+    background-blend-mode: hard-light;
+    background-color: rgb(57, 104, 88);
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.options div:first-child {
+    background-image: url(https://static01.nyt.com/images/2020/11/24/arts/23xp-chess1-print/merlin_178097757_9dfc173d-c574-4a57-8695-a5cc643b98f9-superJumbo.jpg);
+}
+
+.options div:nth-child(2) {
+    background-image: url(https://wallpaperaccess.com/full/4108702.jpg);
+}
