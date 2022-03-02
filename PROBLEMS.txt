@@ -1,0 +1,13 @@
+A fade between two background images
+
+An animation for the beginning of the page load, and then animations for buttons after the page loads.
+
+How many wrappers I need to organize the function.
+
+Finding a framework.
+
+Webkit vs regular variations.
+
+Using console.log to see what's causing null values in JS and why it's null (because its checking id during page load instead of after with the rest).
+
+Why vertical/horizontal scroll isnt all the way in buttons.

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/index.css">
+    <script src="../scripts/index.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div>
+            <span>C</span>
+            <span>H</span>
+            <span>E</span>
+            <span>S</span>
+            <span>S</span>
+        </div>
+        <div>
+            <span>U</span>
+            <span>L</span>
+            <span>.</span>
+        </div>
+    </div>
+    <div class="options">
+        <div class="box" style="--img:url(../images/anna-tinted.jpg); alt: Tinted photo of Anna Taylor-Joy playing Chess">
+            <div class="animation">
+                <button class="preload" id="button-one" onclick="location.href='./custom-chess.html'">
+                    <div class="text">
+                        <span>Create Your Own Game</span>
+                        <span> <br> Customize a chess layout with colour!<span>
+                    </div>
+                </button>
+                <img class="preload gif" id="gif-one" src="../images/chess-960.gif" alt="Chess 960 gameplay">
+            </div>
+        </div>
+        <div class="box" style="--img:url(../images/magnus-tinted.jpg); alt: Tinted photo of Magnus Carlsen playing Chess">
+            <div class="animation">
+                <button class="preload" id="button-two" onclick="location.href='./tactics-finder.html'" type="button">
+                    <div class="text">
+                        <span>Tactics Finder</span>
+                        <span><br><br><br>Place pieces on the board to find potential tactics!</span>
+                    </div>
+                </button>
+                <img class="preload gif" id="gif-two" src="../images/chess-tactics.png" alt="Chess board with arrows">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
