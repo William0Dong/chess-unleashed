@@ -11,3 +11,17 @@ Webkit vs regular variations.
 Using console.log to see what's causing null values in JS and why it's null (because its checking id during page load instead of after with the rest).
 
 Why vertical/horizontal scroll isnt all the way in buttons.
+
+Tried calling from a CDN but had to edit files locally so instead used NPM.\
+
+Could not run script in JS, figured out how to import and the importance of putting node modules in project folder, and using different protocols (file vs HTTPS://)
+
+Export still didnt work because line enabling exports didnt work;
+
+/img/chesspieces/wikipedia/{piece}.png' calls from html file in pages instead of in dist. Had to figure out what the DOM meant when it checked images instead of img/chesspieces. Had to create own folder as the API didnt come with one.
+
+// import { Chessboard } from '../scripts/node_modules/@chrisoakman/chessboardjs/dist/chessboard-1.0.0.js'; doesnt do anything because you dont need to use certain modules.
+
+Stylesheet does the styling of the board for you.
+
+Better to call jquery online.

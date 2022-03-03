@@ -6,9 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Boards</title>
+    <link rel="stylesheet" href="../styles/custom-chess.css">
+    <link rel="stylesheet"
+      href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+      integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
+      crossorigin="anonymous">
+
+    <script src="../scripts/custom-chess.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script type="module"> 
+        import '../scripts/node_modules/@chrisoakman/chessboardjs/dist/chessboard-1.0.0.js';
+        setTimeout(function() {
+        let board1 = new ChessBoard('board1', 'start');
+                              }, 0);
+                              var board2 = Chessboard('board2', {
+  draggable: true,
+  dropOffBoard: 'trash',
+  sparePieces: true
+})
+
+$('#startBtn').on('click', board2.start)
+$('#clearBtn').on('click', board2.clear)
+
+    </script>
 </head>
 
 <body>
+    <div id='board1' style='width: 400px'></div>
+    <div id="board2" style="width: 400px"></div>
+<button id="startBtn">Start Position</button>
+<button id="clearBtn">Clear Board</button>
 
 </body>
 
