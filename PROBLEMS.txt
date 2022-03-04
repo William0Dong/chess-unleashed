@@ -25,3 +25,13 @@ Export still didnt work because line enabling exports didnt work;
 Stylesheet does the styling of the board for you.
 
 Better to call jquery online.
+
+OVERFLOW only covers bottom overflow. Dont use flex on everything because somethings you want to be able to zoom into to enlarge. Set height: 100%.
+
+Tried to use flex: center with height:100% for .text class, but since .text didnt shrink and box did it centered based on the .text so got rid of it.
+
+Set height to 0px to use as a line to align things, and set width to custom px for second row of header since less letters took up more space.
+
+Needed to adjust padding since lines were arranged such that center made the second line closer to the bottom than first line closer to top.
+
+Let images stay the same size to prevent myself from using z-index, since couldnt set z-index to be behind both bottom and top pictures due to the before property css.
