@@ -35,3 +35,5 @@ Set height to 0px to use as a line to align things, and set width to custom px f
 Needed to adjust padding since lines were arranged such that center made the second line closer to the bottom than first line closer to top.
 
 Let images stay the same size to prevent myself from using z-index, since couldnt set z-index to be behind both bottom and top pictures due to the before property css.
+
+https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server

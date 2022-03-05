@@ -11,9 +11,13 @@
     "url": "git+https://github.com/William0Dong/chess-unleashed.git"
   },
   "author": "William Dong",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/William0Dong/chess-unleashed/issues"
   },
-  "homepage": "https://github.com/William0Dong/chess-unleashed#readme"
+  "homepage": "https://github.com/William0Dong/chess-unleashed#readme",
+  "dependencies": {
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.17.0"
+  }
 }
