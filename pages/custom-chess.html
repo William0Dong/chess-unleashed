@@ -10,35 +10,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Roboto&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css" integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU" crossorigin="anonymous" />
-    <script src="../scripts/custom-chess.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="module" src="../scripts/custom-chess.js" ></script>
     <link rel="stylesheet" href="../styles/custom-chess.css">
-    <script type="module"> 
-      import "../scripts/node_modules/@chrisoakman/chessboardjs/dist/chessboard-1.0.0.js";
-      var board2 = Chessboard("board2", {
-        draggable: true,
-        dropOffBoard: "trash",
-        sparePieces: true,
-      });
-      $("#startBtn").on("click", board2.start);
-      $("#clearBtn").on("click", board2.clear);
-    </script> 
   </head>
   <body>
     <div class="sidenav">
       <a href="index.html">HOME</a>
-      <a href="#rotate">ROTATE PIECES</a>
-      <a href="#rules">CHANGE RULES</a>
-      <a href="#bots">PLAY TWO BOTS</a>
+      <a>ROTATE PIECES</a>
+      <a>CHANGE RULES</a>
+      <a>PLAY TWO BOTS</a>
       <div class="dropdown-menu">
         <button class="dropdown-btn">
           SAVE BOARD
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
-          <a href="#">BOARD 1</a>
-          <a href="#">BOARD 2</a>
-          <a href="#">BOARD 3</a>
+          <a id="board1-save">BOARD 1</a>
+          <a id="board2-save">BOARD 2</a>
+          <a id="board3-save">BOARD 3</a>
         </div>
       </div>
       <div class="dropdown-menu">
@@ -47,30 +37,24 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
-          <a href="#">BOARD 1</a>
-          <a href="#">BOARD 2</a>
-          <a href="#">BOARD 3</a>
+          <a id="board1-load">BOARD 1</a>
+          <a id="board2-load">BOARD 2</a>
+          <a id="board3-load">BOARD 3</a>
         </div>
       </div>
     </div>
-
     <div class="main">
-      <div id="board2" style="width: 400px"></div>
+      <div id="board" style="width: 400px"></div>
+      <div class="buttons">
+        <button id="startBtn"><span>Default Position</span></button>
+        <button id="clearBtn"><span>Clear Board</span></button>
+      </div>
     </div>
-
     <script>
       let dropdown = document.getElementsByClassName("dropdown-btn");
-      let i;
-
-      for (i = 0; i < dropdown.length; i++) {
+      for (let i = 0; i < dropdown.length; i++) {
         dropdown[i].addEventListener("click", function () {
           this.classList.toggle("active");
-          let dropdownContent = this.nextElementSibling;
-          if (dropdownContent.style.display === "block") {
-            dropdownContent.style.display = "none";
-          } else {
-            dropdownContent.style.display = "block";
-          }
         });
       }
     </script>
