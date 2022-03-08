@@ -128,7 +128,7 @@ body {
     top: -1vh;
     bottom: 0;
     background: var(--img) center/cover;
-    -webkit-mask: linear-gradient(transparent, #fff 1vh calc(100%), transparent);
+    mask: linear-gradient(transparent, #fff 1vh calc(100%), transparent);
 }
 
 .animation {
@@ -141,20 +141,20 @@ body {
 }
 
 button.preload {
-    -webkit-animation: spin 1s;
+    animation: spin 1s;
 }
 
 button.postload.animated {
-    -webkit-animation: out 0.5s ease-in-out;
+    animation: out 0.5s ease-in-out;
     animation-fill-mode: forwards;
 }
 
 button.postload:hover {
-    -webkit-animation: in 0.5s ease-in-out;
+    animation: in 0.5s ease-in-out;
     animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes spin {
+@keyframes spin {
     from {
         -webkit-transform: rotate(0deg);
     }
@@ -163,7 +163,7 @@ button.postload:hover {
     }
 }
 
-@-webkit-keyframes in {
+@keyframes in {
     from {
         -webkit-transform: translateX(0%);
     }
@@ -172,7 +172,7 @@ button.postload:hover {
     }
 }
 
-@-webkit-keyframes out {
+@keyframes out {
     from {
         -webkit-transform: translateX(-250px);
     }
@@ -199,7 +199,7 @@ img.gif#gif-two {
     border-radius: 5%;
 }
 
-@-webkit-keyframes in-gif {
+@keyframes in-gif {
     from {
         opacity: 0;
     }
@@ -208,7 +208,7 @@ img.gif#gif-two {
     }
 }
 
-@-webkit-keyframes out-gif {
+@keyframes out-gif {
     from {
         opacity: 1;
     }
@@ -218,11 +218,11 @@ img.gif#gif-two {
 }
 
 button.postload:hover~img.gif.animated {
-    -webkit-animation: in-gif 0.5s ease-in-out;
+    animation: in-gif 0.5s ease-in-out;
     animation-fill-mode: forwards;
 }
 
 img.gif.animated {
-    -webkit-animation: out-gif 0.5s ease-in-out;
+    animation: out-gif 0.5s ease-in-out;
     animation-fill-mode: forwards;
 }
