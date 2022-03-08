@@ -82,23 +82,23 @@ body {
 }
 
 .dropdown-btn.active + .dropdown-container > #board1-save, .dropdown-btn.active + .dropdown-container > #board1-load{
-  -webkit-animation-name: showMenuItems;
-  -webkit-animation-duration: 0.5s;
-  -webkit-animation-fill-mode: both;
+  animation-name: showMenuItems;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
 }
 
 .dropdown-btn.active + .dropdown-container > #board2-save, .dropdown-btn.active + .dropdown-container > #board2-load{
-  -webkit-animation-name: showMenuItems;
-  -webkit-animation-duration: 0.5s;
-  -webkit-animation-delay: 1s;
-  -webkit-animation-fill-mode: both;
+  animation-name: showMenuItems;
+  animation-duration: 0.5s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
 }
 
 .dropdown-btn.active + .dropdown-container > #board3-save, .dropdown-btn.active + .dropdown-container > #board3-load {
-  -webkit-animation-name: showMenuItems;
-  -webkit-animation-duration: 0.5s;
-  -webkit-animation-delay: 2s;
-  -webkit-animation-fill-mode: both;
+  animation-name: showMenuItems;
+  animation-duration: 0.5s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
 }
 
 

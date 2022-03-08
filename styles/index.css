@@ -156,28 +156,28 @@ button.postload:hover {
 
 @keyframes spin {
     from {
-        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     to {
-        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
 @keyframes in {
     from {
-        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
     }
     to {
-        -webkit-transform: translateX(-250px);
+        transform: translateX(-250px);
     }
 }
 
 @keyframes out {
     from {
-        -webkit-transform: translateX(-250px);
+        transform: translateX(-250px);
     }
     to {
-        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
     }
 }
 
