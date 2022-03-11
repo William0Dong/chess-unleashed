@@ -39,3 +39,13 @@ Let images stay the same size to prevent myself from using z-index, since couldn
 https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server
 
 Type of object returned by query and using res and result for query and app.get
+
+How to edit code injected by live server
+
+Occam's razor, didnt need to remove the dom nodes and make new objects, simply redefining board = chessboard is enough.
+
+Making sure to add click event after board is remade.
+
+Set interval not stoppign as soon as something is clicked
+
+Don't nest the same click events.

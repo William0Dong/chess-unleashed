@@ -1,15 +1,15 @@
 setTimeout(function () {
-  let button_one = document.getElementById("button-one");
-  let gif_one = document.getElementById("gif-one");
-  let button_two = document.getElementById("button-two");
-  let gif_two = document.getElementById("gif-two");
+  let buttonOne = document.getElementById("button-one");
+  let gifOne = document.getElementById("gif-one");
+  let buttonTwo = document.getElementById("button-two");
+  let gifTwo = document.getElementById("gif-two");
   if ($(window).width() <= 900) {
-    button_one.classList.remove("preload", "postload", "animated");
-    button_two.classList.remove("preload", "postload", "animated");
-    gif_one.classList.remove("preload", "postload", "animated");
-    gif_two.classList.remove("preload", "postload", "animated");
+    buttonOne.classList.remove("preload", "postload", "animated");
+    buttonTwo.classList.remove("preload", "postload", "animated");
+    gifOne.classList.remove("preload", "postload", "animated");
+    gifTwo.classList.remove("preload", "postload", "animated");
   }
-}, 0)
+}, 0);
 
 setTimeout(function () {
   if ($(window).width() > 900) {
@@ -55,19 +55,19 @@ function mouseoverTwo() {
 }
 
 $(window).resize(function () {
-  let button_one = document.getElementById("button-one");
-  let gif_one = document.getElementById("gif-one");
-  let button_two = document.getElementById("button-two");
-  let gif_two = document.getElementById("gif-two");
+  let buttonOne = document.getElementById("button-one");
+  let gifOne = document.getElementById("gif-one");
+  let buttonTwo = document.getElementById("button-two");
+  let gifTwo = document.getElementById("gif-two");
   if ($(window).width() <= 900) {
-    button_one.classList.remove("preload", "postload", "animated");
-    button_two.classList.remove("preload", "postload", "animated");
-    gif_one.classList.remove("preload", "postload", "animated");
-    gif_two.classList.remove("preload", "postload", "animated");
+    buttonOne.classList.remove("preload", "postload", "animated");
+    buttonTwo.classList.remove("preload", "postload", "animated");
+    gifOne.classList.remove("preload", "postload", "animated");
+    gifTwo.classList.remove("preload", "postload", "animated");
   } else {
-    button_one.classList.add("postload");
-    button_two.classList.add("postload");
-    gif_one.classList.add("postload");
-    gif_two.classList.add("postload");
+    buttonOne.classList.add("postload");
+    buttonTwo.classList.add("postload");
+    gifOne.classList.add("postload");
+    gifTwo.classList.add("postload");
   }
 });

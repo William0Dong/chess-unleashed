@@ -8,18 +8,36 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Roboto&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css" integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="module" src="../scripts/custom-chess.js" ></script>
-    <link rel="stylesheet" href="../styles/custom-chess.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hubballi&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+      integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.12.1/chess.min.js"
+      integrity="sha512-rIescAjPgXHz3WaxrSjaOl5iZfvBVIehYe+EF+d+DAdFNgV10QBT8d5APBjcGFKES0iVUYjBilvpck7gOe7CLg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="../scripts/custom-chess.js"></script>
+    <link rel="stylesheet" href="../styles/custom-chess.css" />
   </head>
   <body>
     <div class="sidenav">
       <a href="index.html">HOME</a>
-      <a>ROTATE PIECES</a>
-      <a>CHANGE RULES</a>
-      <a>PLAY TWO BOTS</a>
+      <a id="change-theme">THEME/STOP</a>
+      <a id="change-rules">CHANGE RULES</a>
+      <a id="play-bots">PLAY TWO BOTS</a>
       <div class="dropdown-menu">
         <button class="dropdown-btn">
           SAVE BOARD
@@ -43,9 +61,9 @@
         </div>
       </div>
     </div>
-    <div class="main">
+    <div class="main" id="board-create">
       <div id="board" style="width: 400px"></div>
-      <div class="buttons">
+      <div class="buttons" id="buttons">
         <button id="startBtn"><span>Default Position</span></button>
         <button id="clearBtn"><span>Clear Board</span></button>
       </div>
