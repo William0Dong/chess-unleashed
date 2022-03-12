@@ -8,9 +8,13 @@
   }
 }
 
+
 body {
   font-family: "Hubballi", cursive;
   overflow: hidden;
+  margin: 0px;
+  height: 100vh;
+  width: 100%;
 }
 
 
@@ -55,19 +59,13 @@ body {
 }
 
 .main {
-  margin-left: 190px;
-  width: 88vw;
-  height: 95vh;
+  margin-left: 200px;
+  height: 100vh;
   font-size: 20px; 
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  background-color: #9dc5c3;
-  background-image: linear-gradient(-315deg, rgb(57, 104, 88) 0%, rgb(17, 17, 17) 70%);
-  padding-top: 18px;
-  padding-bottom: 50px;
-  padding-right: 45px;
-  margin-top: -8px;
+  background: linear-gradient(to right, rgb(44, 119, 68), rgb(90, 63, 55)); 
 }
 
 .active {
@@ -154,5 +152,29 @@ body {
   to {
     opacity: 1;
     transform: scaleX(1);
+  }
+}
+
+img[src~="../images/brain.png"] {
+  width: calc(300px + var(--x) * 200px);
+  height: calc(300px + var(--y) * 200px);
+  mix-blend-mode: overlay;
+  opacity: 50%;
+}
+
+.main:not(:hover) img[src~="../images/brain.png"] {
+  animation-name: img-norm;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes img-norm {
+  from {
+  width: calc(300px + var(--x) * 200px);
+  height: calc(300px + var(--y) * 200px);
+  }
+  to {
+    width: 400px;
+    height: 341px;
   }
 }

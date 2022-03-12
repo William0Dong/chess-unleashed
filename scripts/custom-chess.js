@@ -210,3 +210,14 @@ $("#play-bots").click(function () {
   }
   intervalId = setInterval(slowMoves, 500);
 });
+
+const mousePos = { x : 0, y : 0 };
+
+const saveCursorPosition = function(x, y) {
+  mousePos.x = (x / window.innerWidth);
+  mousePos.y = (y / window.innerHeight);
+  document.documentElement.style.setProperty('--x', mousePos.x);
+  document.documentElement.style.setProperty('--y', mousePos.y);
+}
+
+document.getElementById("board-create").addEventListener('mousemove', cursor => { saveCursorPosition(cursor.clientX, cursor.clientY); })
