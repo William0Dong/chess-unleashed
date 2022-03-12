@@ -15,7 +15,6 @@ $("#clearBtn").click(board.clear);
 
 $("#change-theme").click(function () {
   lastPlayed = false;
-  changeCount++;
   let curPos = board.fen();
   board.destroy();
   if (document.getElementById("startBtn") != null) {
@@ -38,17 +37,19 @@ $("#change-theme").click(function () {
   document.getElementById("buttons").prepend(startBtn);
   startBtn.setAttribute("id", "startBtn");
   if (changeCount == -1) {
+    changeCount++;
     board = Chessboard("board", {
       draggable: true,
       dropOffBoard: "trash",
       sparePieces: true,
       position: curPos,
       pieceTheme:
-        "https://raw.githubusercontent.com/lichess-org/lila/master/public/piece/alpha/bB.svg",
+        "https://raw.githubusercontent.com/lichess-org/lila/master/public/piece/alpha/{piece}.svg",
     });
     $("#startBtn").click(board.start);
     $("#clearBtn").click(board.clear);
   } else if (changeCount == 0) {
+    changeCount++;
     board = Chessboard("board", {
       draggable: true,
       dropOffBoard: "trash",
@@ -60,6 +61,7 @@ $("#change-theme").click(function () {
     $("#startBtn").click(board.start);
     $("#clearBtn").click(board.clear);
   } else if (changeCount == 1) {
+    changeCount++;
     board = Chessboard("board", {
       draggable: true,
       dropOffBoard: "trash",
