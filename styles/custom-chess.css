@@ -65,11 +65,11 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(to right, rgb(44, 119, 68), rgb(90, 63, 55)); 
+  background: linear-gradient(315deg, #000000 0%, #414141 74%);
 }
 
 .active {
-  background-color: green;
+  background-color: rgb(57, 104, 88);
   color: white;
 }
 
