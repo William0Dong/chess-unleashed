@@ -93,7 +93,7 @@ $("#board1-save").click(function () {
     url: " http://localhost:3000/board1save ",
     type: "POST",
     data: {
-      name: "BOARD1",
+      name: document.getElementById("board1-save").textContent,
       fen: fenPos,
     },
     success: function (response) {},
@@ -106,7 +106,7 @@ $("#board2-save").click(function () {
     url: " http://localhost:3000/board2save ",
     type: "POST",
     data: {
-      name: "BOARD2",
+      name: document.getElementById("board2-save").textContent,
       fen: fenPos,
     },
     success: function (response) {},
@@ -119,7 +119,7 @@ $("#board3-save").click(function () {
     url: " http://localhost:3000/board3save ",
     type: "POST",
     data: {
-      name: "BOARD3",
+      name: document.getElementById("board3-save").textContent,
       fen: fenPos,
     },
     success: function (response) {},
