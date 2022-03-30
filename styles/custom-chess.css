@@ -160,8 +160,8 @@ body {
 }
 
 img[src~="../images/brain.png"] {
-  width: calc(300px + var(--x) * 200px);
-  height: calc(300px + var(--y) * 200px);
+  width: calc(256px + var(--x) * 200px);
+  height: calc(256px + var(--y) * 200px);
   mix-blend-mode: color-burn;
 }
 
@@ -173,11 +173,11 @@ img[src~="../images/brain.png"] {
 
 @keyframes img-norm {
   from {
-  width: calc(300px + var(--x) * 200px);
-  height: calc(300px + var(--y) * 200px);
+  width: calc(256px + var(--x) * 200px);
+  height: calc(256px + var(--y) * 200px);
   }
   to {
-    width: 400px;
-    height: 341px;
+    width: 256px;
+    height: 256px;
   }
 }

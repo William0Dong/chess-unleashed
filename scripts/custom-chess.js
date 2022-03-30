@@ -214,7 +214,7 @@ $("#play-bots").click(function () {
 const mousePos = { x : 0, y : 0 };
 
 const saveCursorPosition = function(x, y) {
-  mousePos.x = (x / window.innerWidth);
+  mousePos.x = (x / window.innerWidth) - 0.15;
   mousePos.y = (y / window.innerHeight);
   document.documentElement.style.setProperty('--x', mousePos.x);
   document.documentElement.style.setProperty('--y', mousePos.y);
