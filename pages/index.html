@@ -24,9 +24,9 @@
             <span>S</span>
         </div>
         <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="70" viewBox="0 0 640 480" fill="none" id="svg-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="75" viewBox="0 0 640 480" fill="none" id="svg-text">
                 <defs>
-            <linearGradient id="linear-gradient" x1="-100%" y1="100%" x2="800%" y2="0" >
+            <linearGradient id="linear-gradient" x1="-100%" y1="100%" x2="500%" y2="0" >
                 <stop offset="0" stop-color="#D7B56D">
                    <animate attributeName="offset" values="0;0.8" dur="2s" repeatCount="indefinite"  /> 
                 </stop>
@@ -42,11 +42,9 @@
             </linearGradient>
         </defs> 
         <g>
-            <title>Layer 1</title>
-            <g id="layer1">
-             <g id="g1269">
-              <path fill="url(#linear-gradient)" id="path1061" d="m633.494812,215.509827l-174.562134,142.974609l0,-70.86615l-442.913391,0l0,-141.7323l442.913391,0l0,-70.866119l174.562134,140.48996z"/>
-              <path fill="url(#linear-gradient)" id="path1691" d="m616.118774,216.272217l-146.490143,25.636719l-442.050507,0l0,-83.749298l442.050507,0l0,-59.149445l146.490143,117.262024z"/>
+            <g>
+             <g>
+              <path fill="url(#linear-gradient)" d="m633.494812,215.509827l-174.562134,142.974609l0,-70.86615l-442.913391,0l0,-141.7323l442.913391,0l0,-70.866119l174.562134,140.48996z"/>
              </g>
             </g>
            </g>
@@ -59,7 +57,14 @@
         </div>
     </div>
     <div class="options">
-        <div class="box" style="--img:url(../images/anna-tinted.jpg); alt: Tinted photo of Anna Taylor-Joy playing Chess">
+        <div class="box">
+            <svg height="100%" width="100%" class="svg-clip" style="position:absolute">
+                <defs>
+                     <clipPath id="clip" clipPathUnits="objectBoundingBox">
+                       <path d="M 0 0 L 0 0.9 Q 0.25 0.75 0.5 0.9 T 1 0.9 L 1 0 L 0 0" />
+                    </clipPath>
+                </defs>
+            </svg>
             <div class="animation">
                 <button class="preload" id="button-one" onclick="location.href='./custom-chess.html'">
                         <span>Create Your Own Game</span>
@@ -68,7 +73,7 @@
                 <img class="preload gif" id="gif-one" src="../images/chess-960.gif" alt="Chess 960 gameplay">
             </div>
         </div>
-        <div class="box" style="--img:url(../images/magnus-tinted.jpg); alt: Tinted photo of Magnus Carlsen playing Chess">
+        <div class="box">            
             <div class="animation">
                 <button class="preload" id="button-two" onclick="location.href='./tactics-finder.html'" type="button">
                         <span>Tactics Finder</span>

@@ -53,7 +53,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 79.4%;
+    height: 80%;
+    background-image: url(../images/magnus-tinted.jpg);
+    background-size: cover;
 }
 
 .box button {
@@ -71,6 +73,10 @@ body {
     margin: 0px;
 }
 
+.box:first-child button {
+    height: 40%;
+}
+
 .options button:first-child span:first-child {
     font-size: 36px;
     font-weight: 700;
@@ -84,7 +90,6 @@ body {
 .box {
     width: 100%;
     position: relative;
-    height: 50%;
     text-align: center;
     color: #fff;
     display: flex;
@@ -92,15 +97,14 @@ body {
     align-items: center;
 }
 
-.box:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -1vh;
-    bottom: 0;
-    background: var(--img) center/cover;
-    mask: linear-gradient(transparent, #fff 1vh calc(100%), transparent);
+.box:first-child {
+    background-image: url(../images/anna-tinted.jpg);
+    clip-path: url(#clip);
+    height: 56%;
+}
+
+.box:nth-child(2) {
+    height: 44%;
 }
 
 .animation {
@@ -157,7 +161,7 @@ img.gif#gif-one {
     opacity: 0;
     z-index: 1;
     width: auto;
-    height: 70%;
+    height: 55%;
     margin-left: 35%;
     border-radius: 5%;
 }
