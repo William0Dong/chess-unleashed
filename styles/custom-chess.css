@@ -65,7 +65,11 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(315deg, #000000 0%, #414141 74%);
+  background: repeating-linear-gradient(
+    45deg,
+    #414141,
+    #000000 3%)
+
 }
 
 .active {
@@ -158,8 +162,7 @@ body {
 img[src~="../images/brain.png"] {
   width: calc(300px + var(--x) * 200px);
   height: calc(300px + var(--y) * 200px);
-  mix-blend-mode: overlay;
-  opacity: 50%;
+  mix-blend-mode: color-burn;
 }
 
 .main:not(:hover) img[src~="../images/brain.png"] {
