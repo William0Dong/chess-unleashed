@@ -80,18 +80,20 @@ function onChange (oldPos, newPos) {
       if(chess.in_checkmate() == true) {
         ++checkmate_count;
       } 
-      if(chess.in_check() == true) {
+      if(chess.in_check() == true && (move_info.captured != 'p' || move_info.captured != null)) {
         ++pin_count;
       }
       if((move_info.captured == 'q' || move_info.captured == 'r') && move_info.piece == 'n') {
         ++forked_pieces;
-      } else if(move_info.captured != 'p' && move_info.piece == 'p') {
+      } else if((move_info.captured != 'p' || move_info.captured != null) && move_info.piece == 'p') {
         ++forked_pieces;
       }
     chess.load(chess_pos);  
     }
+
   }
   loopMoves(); 
+  
   animPopUp(checkmate_count + " WHITE CHECKMATES");
   document.getElementById("myPopup").addEventListener("animationend", () =>
   {
