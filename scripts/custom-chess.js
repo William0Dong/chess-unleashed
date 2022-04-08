@@ -87,91 +87,91 @@ $("#change-theme").click(function () {
   }
 });
 
-$("#board1-save").click(function () {
-  fenPos = board.fen(board);
-  $.ajax({
-    url: " http://localhost:3000/board1save ",
-    type: "POST",
-    data: {
-      name: document.getElementById("board1-save").textContent,
-      fen: fenPos,
-    },
-    success: function (response) {},
-  });
+$("#board1-save").keypress(function (e) {
+  if(e.which == 13) {
+    fenPos = board.fen(board);
+    $.ajax({
+      url: " http://localhost:3000/board1save ",
+      type: "POST",
+      data: {
+        name: document.getElementById("board1-save").textContent,
+        fen: fenPos,
+      },
+      success: function (response) {},
+    });
+  }
 });
 
-$("#board2-save").click(function () {
-  fenPos = board.fen(board);
-  $.ajax({
-    url: " http://localhost:3000/board2save ",
-    type: "POST",
-    data: {
-      name: document.getElementById("board2-save").textContent,
-      fen: fenPos,
-    },
-    success: function (response) {},
-  });
+$("#board2-save").keypress(function (e) {
+  if(e.which == 13) {
+    fenPos = board.fen(board);
+    $.ajax({
+      url: " http://localhost:3000/board2save ",
+      type: "POST",
+      data: {
+        name: document.getElementById("board2-save").textContent,
+        fen: fenPos,
+      },
+      success: function (response) {},
+    });
+  }
 });
 
-$("#board3-save").click(function () {
-  fenPos = board.fen(board);
-  $.ajax({
-    url: " http://localhost:3000/board3save ",
-    type: "POST",
-    data: {
-      name: document.getElementById("board3-save").textContent,
-      fen: fenPos,
-    },
-    success: function (response) {},
-  });
+$("#board3-save").keypress(function (e) {
+  if(e.which == 13) {
+    fenPos = board.fen(board);
+    $.ajax({
+      url: " http://localhost:3000/board3save ",
+      type: "POST",
+      data: {
+        name: document.getElementById("board3-save").textContent,
+        fen: fenPos,
+      },
+      success: function (response) {},
+    });
+  }
 });
 
-$("#board1-load").click(function () {
-  fenPos = board.fen(board);
-  $.ajax({
-    url: " http://localhost:3000/board1load ",
-    type: "GET",
-    datatype: "text",
-    success: function (res) {
-      board.position(res);
-    },
-  });
+$("#board1-load").keypress(function (e) {
+  if(e.which == 13) {
+    fenPos = board.fen(board);
+    $.ajax({
+      url: " http://localhost:3000/board1load ",
+      type: "GET",
+      datatype: "text",
+      success: function (res) {
+        board.position(res);
+      },
+    });
+  }
 });
 
-$("#board1-load").click(function () {
-  fenPos = board.fen(board);
-  $.ajax({
-    url: " http://localhost:3000/board1load ",
-    type: "GET",
-    datatype: "text",
-    success: function (res) {
-      board.position(res);
-    },
-  });
+$("#board2-load").keypress(function (e) {
+  if(e.which == 13) {
+    fenPos = board.fen(board);
+    $.ajax({
+      url: " http://localhost:3000/board2load ",
+      type: "GET",
+      datatype: "text",
+      success: function (res) {
+        board.position(res);
+      },
+    });
+  }
 });
 
-$("#board2-load").click(function () {
-  fenPos = board.fen(board);
-  $.ajax({
-    url: " http://localhost:3000/board2load ",
-    type: "GET",
-    datatype: "text",
-    success: function (res) {
-      board.position(res);
-    },
-  });
-});
-
-$("#board3-load").click(function () {
-  fenPos = board.fen(board);
-  $.ajax({
-    url: " http://localhost:3000/board3load ",
-    type: "GET",
-    datatype: "text",
-    success: function (res) {
-      board.position(res);
-    },
-  });
+$("#board3-load").keypress(function (e) {
+  if(e.which == 13) {
+    fenPos = board.fen(board);
+    $.ajax({
+      url: " http://localhost:3000/board3load ",
+      type: "GET",
+      datatype: "text",
+      success: function (res) {
+        board.position(res);
+      },
+    });
+  }
 });
 
 $("#play-bots").click(function () {
@@ -221,3 +221,9 @@ const saveCursorPosition = function(x, y) {
 }
 
 document.getElementById("board-create").addEventListener('mousemove', cursor => { saveCursorPosition(cursor.clientX, cursor.clientY); })
+
+$(".name-edit").keypress(function(e){
+  if(e.which == 13) {
+      $(this).blur();
+    }
+});

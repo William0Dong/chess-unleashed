@@ -5,7 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tactics Finder</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hubballi&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+      integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.12.1/chess.min.js"
+      integrity="sha512-rIescAjPgXHz3WaxrSjaOl5iZfvBVIehYe+EF+d+DAdFNgV10QBT8d5APBjcGFKES0iVUYjBilvpck7gOe7CLg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="../styles/custom-chess.css" />
+    <link rel="stylesheet" href="../styles/tactics-finder.css"/>
+    <script type="module" src="../scripts/tactics-finder.js"></script>
   </head>
 
-  <body></body>
+  <body>
+    <div class="sidenav">
+      <a href="index.html">HOME</a>
+      <div class="dropdown-menu">
+        <button class="dropdown-btn">
+          LOAD BOARD
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a contenteditable="true" class="name-edit" id="board1-load">BOARD 1</a>
+          <a contenteditable="true" class="name-edit" id="board2-load">BOARD 2</a>
+          <a contenteditable="true" class="name-edit" id="board3-load">BOARD 3</a>
+        </div>
+      </div>
+    </div>
+    <div class="main" id="board-create" style="background: repeating-linear-gradient(45deg,rgb(40, 70, 60), rgb(92, 119, 110) 1%); background-color:rgb(40, 70, 60)">
+      <div id="backdrop">
+      <div class="chess popup">
+        <span class="popuptext" id="myPopup">A Simple Popup!</span>
+        <div id="board" style="width: 400px"></div>
+      </div>
+      </div>
+    </div>
+    </div>
+    <script>
+      let dropdown = document.getElementsByClassName("dropdown-btn");
+      for (let i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+      }
+    </script>
+  </body>
 </html>
